@@ -524,7 +524,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="95" />
     <option name="y" value="374" />
     <option name="width" value="1618" />
@@ -709,7 +709,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529342136242</updated>
       <workItem from="1529342141580" duration="938000" />
-      <workItem from="1529666438311" duration="5891000" />
+      <workItem from="1529666438311" duration="6546000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1529672765311</created>
@@ -729,14 +729,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6829000" />
+    <option name="totallyTimeSpent" value="7484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005952" side_tool="true" visible="true" weight="0.32930845" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005952" side_tool="true" weight="0.32930845" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -752,9 +752,9 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49940476" visible="true" weight="0.32930845" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940476" weight="0.41383097" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49940476" visible="true" weight="0.32930845" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49940476" weight="0.32930845" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17440476" />
       <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.09583333" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -771,6 +771,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />

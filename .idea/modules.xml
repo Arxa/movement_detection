@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/live_camera_system.iml" filepath="$PROJECT_DIR$/.idea/modules/live_camera_system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/live_camera_system_main.iml" filepath="$PROJECT_DIR$/.idea/modules/live_camera_system_main.iml" group="live_camera_system" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/live_camera_system_test.iml" filepath="$PROJECT_DIR$/.idea/modules/live_camera_system_test.iml" group="live_camera_system" />
+    </modules>
+  </component>
+</project>

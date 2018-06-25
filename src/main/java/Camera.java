@@ -2,7 +2,6 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.videoio.VideoCapture;
-
 import java.util.Base64;
 
 public class Camera {

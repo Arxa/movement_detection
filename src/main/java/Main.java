@@ -7,11 +7,8 @@ public class Main {
         Camera.openCamera();
         Spark.staticFiles.location("/web");
         Spark.staticFiles.expireTime(600);
+        // websocket path should be the same as the one defined in webSocket.js
         Spark.webSocket("/socket", WsHandler.class);
         Spark.init();
-
-//        get("/",(request, response) ->
-//                "Welcome"
-//        );
     }
 }

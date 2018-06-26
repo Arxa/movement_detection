@@ -45,7 +45,7 @@ public class WsHandler {
                     timer.cancel();
                 }
             }
-        }, 10, 10);
+        }, 10, 300);
     }
 
     /**

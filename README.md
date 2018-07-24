@@ -6,3 +6,6 @@ In this project, you will find a minimal Java implementation for broadcasting yo
 Technologies used:
 
 <b>Java, Spark, JavaCV, OpenCV, Gradle</b>
+<br>
+<br>
+![smaci](https://user-images.githubusercontent.com/15330998/43124951-e82cd9c4-8f28-11e8-8a32-15863ae5655c.gif)

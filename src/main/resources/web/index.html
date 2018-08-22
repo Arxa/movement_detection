@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Nikiforos Archakis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            position: relative;
+            font-family: Arial;
+        }
+
+        .text-block {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: black;
+            opacity: 0.4;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Live View!</h1>
-    <img id="frame" src=""/>
 
-    <script src="jQuery3.2.1.js"></script>
-    <script src="webSocket.js"></script>
+<script src="jQuery3.2.1.js"></script>
+<script src="webSocket.js"></script>
+
+<div class="container">
+    <img id="frame" src="" alt="Nature" style="width:50%;">
+    <div class="text-block">
+        <h4>Security Alarm System</h4>
+        <p>Live view & real time movement detection</p>
+    </div>
+</div>
 
 </body>
 </html>

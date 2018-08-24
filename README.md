@@ -8,7 +8,9 @@ Technologies used:
 <br>
 
 <h3>Real-time movement detection</h3>
+
 ![smaci](https://user-images.githubusercontent.com/15330998/44586898-8b204d00-a7b1-11e8-836b-1877c96d34be.gif)
 
 <h3>Webcam Live Streaming</h3>
-![smaci](https://user-images.githubusercontent.com/15330998/43124951-e82cd9c4-8f28-11e8-8a32-15863ae5655c.gif)
+
+![smaci2](https://user-images.githubusercontent.com/15330998/43124951-e82cd9c4-8f28-11e8-8a32-15863ae5655c.gif)

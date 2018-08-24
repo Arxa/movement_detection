@@ -3,11 +3,12 @@ import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.util.Timer;
 import java.util.TimerTask;
 
 @WebSocket
-public class WsHandler {
+public class WebsocketHandler {
 
     private Session session;
 
@@ -53,6 +54,6 @@ public class WsHandler {
      */
     private void broadcastMessage() throws IOException {
         // this code will trigger the js event method 'webSocket.onmessage'
-        session.getRemote().sendString(Camera.encodeWebcamFrame());
+        session.getRemote().sendString(String.valueOf(Camera.encodeWebcamFrame()));
     }
 }

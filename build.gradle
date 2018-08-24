@@ -16,5 +16,7 @@ dependencies {
     compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.4.1'
     compile "org.slf4j:slf4j-api:1.7.13"
     compile "org.slf4j:slf4j-simple:1.7.21"
+    compile group: 'org.json', name: 'json', version: '20180813'
+
 }
 

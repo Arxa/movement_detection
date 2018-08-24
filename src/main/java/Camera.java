@@ -1,17 +1,10 @@
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+import javafx.util.Pair;
+import org.json.JSONObject;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Paths;
 import java.util.Base64;
 
 public class Camera {
@@ -36,15 +29,19 @@ public class Camera {
      * Encodes the jpeg image to base64 String representation.
      * @return the full data URI of the image to be shown in HTML
      */
-    public static String encodeWebcamFrame() {
+    public static JSONObject encodeWebcamFrame() {
         Mat frame1 = new Mat();
         Mat frame2 = new Mat();
         videoCapture.read(frame1);
         videoCapture.read(frame2);
-        Mat painted = detectMotion(frame1,frame2);
+        Pair<Mat,Boolean> framePair = detectMotion(frame1,frame2);
         MatOfByte matOfByte = new MatOfByte();
-        Imgcodecs.imencode(".jpeg", painted, matOfByte);
-        return "data:image/jpeg;charset=utf-8;base64," + Base64.getEncoder().encodeToString(matOfByte.toArray());
+        Imgcodecs.imencode(".jpeg", framePair.getKey(), matOfByte);
+        String frameData = "data:image/jpeg;charset=utf-8;base64," + Base64.getEncoder().encodeToString(matOfByte.toArray());
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("image",frameData);
+        jsonObject.put("sound",framePair.getValue());
+        return jsonObject;
     }
 
     /**
@@ -53,7 +50,7 @@ public class Camera {
      * @param second Second image
      * @return The second image with the area(s) of movement being painted with bounding boxes.
      */
-    public static Mat detectMotion(Mat first,Mat second){
+    public static Pair<Mat,Boolean> detectMotion(Mat first, Mat second){
         Mat painted = new Mat();
         second.copyTo(painted);
         //Imgproc.resize(first,first,new Size(300,300));
@@ -82,17 +79,7 @@ public class Camera {
             Imgproc.rectangle(painted, new Point(textBlock.x,textBlock.y),
                     new Point(textBlock.x+textBlock.width,textBlock.y+textBlock.height),new Scalar(255.0),2);
         }
-        if (movementDetected){
-            String bip = "C:\\Users\\arxakoulini\\Desktop\\camera_security_system\\src\\main\\resources\\web\\alarm_sound3.wav";
-            try {
-                InputStream in = new FileInputStream(bip);
-                AudioStream audioStream = new AudioStream(in);
-                AudioPlayer.player.start(audioStream);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return painted;
+        return new Pair<>(painted,movementDetected);
     }
 
     public static void saveImage(Mat image,String name){

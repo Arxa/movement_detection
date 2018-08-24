@@ -1,4 +1,6 @@
 var webSocket;
+var audio = new Audio('./alarm_sound3.mp3');
+audio.loop = false;
 
 $(document).ready(function(){
     webSocket = new WebSocket("ws://" + location.hostname + ":" + location.port + "/socket");
@@ -7,7 +9,10 @@ $(document).ready(function(){
 });
 
 function onMessage(msg) {
-    var encodedImage = msg.data; // get websocket's data
-    $("#frame").attr("src", encodedImage); // shows the image in index.html
+    var data = JSON.parse(msg.data); // retrieving json data from websocket
+    $("#frame").attr("src", data.image); // shows the image in index.html
+    if (data.sound === true){
+        audio.play();
+    }
 }
 

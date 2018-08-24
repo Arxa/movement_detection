@@ -10,7 +10,7 @@ public class Main {
         Spark.staticFiles.location("/web");
         Spark.staticFiles.expireTime(600);
         // websocket path should be the same as the one defined in webSocket.js
-        Spark.webSocket("/socket", WsHandler.class);
+        Spark.webSocket("/socket", WebsocketHandler.class);
         Spark.init();
     }
 }

@@ -2,8 +2,8 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 mainClassName = "Main"
 
 repositories{
@@ -12,11 +12,10 @@ repositories{
 
 dependencies {
 
-    compile group: 'com.sparkjava', name: 'spark-core', version: '2.7.2'
-    compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.4.1'
-    compile "org.slf4j:slf4j-api:1.7.13"
-    compile "org.slf4j:slf4j-simple:1.7.21"
-    compile group: 'org.json', name: 'json', version: '20180813'
+    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.4'
+    implementation group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.8'
+    implementation group: 'org.json', name: 'json', version: '20220924'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.6'
 
 }
 

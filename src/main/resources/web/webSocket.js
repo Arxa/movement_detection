@@ -1,5 +1,6 @@
 var webSocket;
-var audio = new Audio('./alarm_sound3.mp3');
+var mp3_url = './alarm_sound.mp3';
+var audio = new Audio(mp3_url);
 audio.loop = false;
 
 $(document).ready(function(){
